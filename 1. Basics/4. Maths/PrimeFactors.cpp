@@ -42,10 +42,29 @@ void primeFactorNaive(int a, vector<int> &res) // O(n*n*logn)
     }
 }
 
+void primeFactorEfficient(int a, vector<int> &res) // O(sqrt(n)*logn)
+{
+
+    for (int i = 2; i * i <= a; i++) // O(sqrt(n))
+    {
+
+        while (a % i == 0) // O(loga)
+        {
+            res.push_back(i);
+            a = a / i;
+        }
+    }
+
+    if (a > 1)
+    {
+        res.push_back(a);
+    }
+}
+
 int main()
 {
     vector<int> res;
-    primeFactorNaive(330, res);
+    primeFactorEfficient(330, res);
 
     for (int x : res)
     {
