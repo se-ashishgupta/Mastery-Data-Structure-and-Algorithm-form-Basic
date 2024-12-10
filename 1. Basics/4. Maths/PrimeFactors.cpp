@@ -3,7 +3,7 @@
 #include <math.h>
 using namespace std;
 
-bool checkPrime(int a)
+bool checkPrime(int a) // O(logn)
 {
     if (a == 1)
         return false;
@@ -28,12 +28,12 @@ bool checkPrime(int a)
 void primeFactorNaive(int a, vector<int> &res) // O(n*n*logn)
 {
 
-    for (int i = 2; i < a; i++)
+    for (int i = 2; i < a; i++) // O(n)
     {
-        if (checkPrime(i))
+        if (checkPrime(i)) // O(logn)
         {
             int x = i;
-            while (a % x == 0)
+            while (a % x == 0) // O(n)
             {
                 res.push_back(i);
                 x = x * i;
@@ -41,28 +41,11 @@ void primeFactorNaive(int a, vector<int> &res) // O(n*n*logn)
         }
     }
 }
-void primeFactorNaive1(int a, vector<int> &res) // O(n*logn)
-{
-
-    int i = 2;
-    while (a > 1)
-    {
-        if (a % i == 0 && checkPrime(i))
-        {
-            res.push_back(i);
-            a = a / i;
-        }
-        else
-        {
-            i++;
-        }
-    }
-}
 
 int main()
 {
     vector<int> res;
-    primeFactorNaive(315, res);
+    primeFactorNaive1(330, res);
 
     for (int x : res)
     {
