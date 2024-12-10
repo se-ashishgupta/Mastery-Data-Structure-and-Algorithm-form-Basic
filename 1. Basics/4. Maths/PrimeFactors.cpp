@@ -45,7 +45,7 @@ void primeFactorNaive(int a, vector<int> &res) // O(n*n*logn)
 int main()
 {
     vector<int> res;
-    primeFactorNaive1(330, res);
+    primeFactorNaive(330, res);
 
     for (int x : res)
     {
