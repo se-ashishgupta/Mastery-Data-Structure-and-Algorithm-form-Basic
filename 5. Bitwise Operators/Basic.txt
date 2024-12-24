@@ -1,0 +1,8 @@
+Toal 6 Bitwise operator in C++.
+
+1. AND (&)
+2. OR (|)
+3. XOR (^)
+4. Left Shift (<<)
+5. Right Shift (>>)
+6. Bitwise NOT (~)
