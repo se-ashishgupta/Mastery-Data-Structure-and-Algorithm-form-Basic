@@ -6,3 +6,5 @@ Toal 6 Bitwise operator in C++.
 4. Left Shift (<<)
 5. Right Shift (>>)
 6. Bitwise NOT (~)
+
+All takes O(1) Time
