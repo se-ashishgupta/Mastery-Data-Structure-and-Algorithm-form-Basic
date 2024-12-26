@@ -8,3 +8,30 @@ Toal 6 Bitwise operator in C++.
 6. Bitwise NOT (~)
 
 All takes O(1) Time
+
+
+-------------------------------------------------------------------------------------
+Find Two Missing Number 
+-------------------------------------------------------------------------------------
+Why find the rightmost set bit?
+The rightmost set bit in the XOR of two numbers tells us the first position where the two numbers differ in their binary representation. This difference helps us split the numbers into two groups:
+
+One group where this bit is set (1).
+Another group where this bit is unset (0).
+
+How to find the rightmost set bit?
+Given a number n, the formula to find its rightmost set bit is:
+
+rightmost_set_bit=n&∼(n−1)
+
+That's a great question! Let me clarify why other same numbers will never go into two different groups when we use the rightmost set bit as a separator.
+
+The key here is that the rightmost set bit is always consistent for numbers:
+
+Numbers that are the same will always have identical binary representations.
+When we check whether the rightmost set bit is 1 or 0 for a number, it will always fall into the same group every time.
+
+
+------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------
