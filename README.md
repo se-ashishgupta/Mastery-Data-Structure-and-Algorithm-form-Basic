@@ -1,6 +1,6 @@
 # Mastery-Data-Structure-and-Algorithm
 
-# Table of Content
+### Table of Content
 
 1.  Basics
 2.  Pattern
