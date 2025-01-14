@@ -1,0 +1,9 @@
+
+Bitwise --------------
+1. Power Set in Butwise section
+
+
+Recusrion -------------
+1. Tower of Hanoi.
+2. Josephus Poblem.
+3. Permutation
