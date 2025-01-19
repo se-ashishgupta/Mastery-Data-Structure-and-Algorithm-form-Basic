@@ -8,3 +8,4 @@
 4.  Maths
 5.  Bit Manipulation
 6.  Recursion
+7.  Array
