@@ -133,13 +133,52 @@ int MaximumCircularSubarrayEfficient(vector<int> &arr)
     return max(maxNormal, maxCircular);
 }
 
+// Function to calculate the maximum circular subarray sum
+int circularSubarraySum(vector<int> &arr)
+{
+    int totalSum = 0;    // Total sum of the array
+    int currMaxSum = 0;  // Running sum for maximum subarray (Kadane's)
+    int currMinSum = 0;  // Running sum for minimum subarray (Kadane's)
+    int maxSum = arr[0]; // Initialize max subarray sum with first element
+    int minSum = arr[0]; // Initialize min subarray sum with first element
+
+    // Iterate through the array
+    for (int i = 0; i < arr.size(); i++)
+    {
+        // Kadane's algorithm to find the maximum sum subarray
+        currMaxSum = max(currMaxSum + arr[i], arr[i]);
+        maxSum = max(maxSum, currMaxSum); // Update the global maximum sum
+
+        // Kadane's algorithm to find the minimum sum subarray
+        currMinSum = min(currMinSum + arr[i], arr[i]);
+        minSum = min(minSum, currMinSum); // Update the global minimum sum
+
+        // Calculate the total sum of the array
+        totalSum = totalSum + arr[i];
+    }
+
+    // Calculate the normal (non-circular) maximum sum
+    int normalSum = maxSum;
+
+    // Calculate the circular maximum sum by subtracting the minimum subarray sum from the total sum
+    int circularSum = totalSum - minSum;
+
+    // Handle the edge case where all elements are negative:
+    // In this case, `minSum == totalSum`, and we should return `normalSum` directly
+    if (minSum == totalSum)
+        return normalSum;
+
+    // Return the maximum of normal maximum sum and circular maximum sum
+    return max(normalSum, circularSum);
+}
+
 int main()
 {
     // Example array
     vector<int> arr{8, -4, 3, -5, 4};
 
     // Calculate the maximum circular subarray sum
-    int maxSum = MaximumCircularSubarrayEfficient(arr);
+    int maxSum = circularSubarraySum(arr);
 
     // Print the result
     cout << "Maximum sum of a circular subarray is " << maxSum << endl;
