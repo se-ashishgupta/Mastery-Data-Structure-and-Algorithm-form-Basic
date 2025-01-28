@@ -81,6 +81,7 @@ int MaximumCircularSubarrayNoraml(vector<int> &arr)
    - Invert the array elements (make all elements negative).
    - Use Kadane's Algorithm to find the maximum sum subarray of the inverted array.
    - Subtract this sum from the total sum to get the circular maximum.
+   -  The maximum sum of a circular subarray can be defined as the total sum of the array minus the sum of a subarray in the middle. So, to maximize the circular subarray sum, we need to minimize the subarray sum.
 2. Complexity:
    - **Time**: O(n)
    - **Space**: O(1)
