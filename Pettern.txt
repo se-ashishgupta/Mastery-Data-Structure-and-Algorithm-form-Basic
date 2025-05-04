@@ -1,0 +1,5 @@
+Pettern Found -------------------------
+
+1. Array
+- In Question Maximum Consecutuve Ones and Maximum Even Odd Subarray you found that for efficent we just iterate one loop and done two pointer in if else and take res as max all time, go through solution one please.
+ 

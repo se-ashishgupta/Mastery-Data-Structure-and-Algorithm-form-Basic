@@ -65,6 +65,7 @@ int firstOccurrence(vector<int> &arr, int target)
         if (arr[mid] == target)
         {
             // Check if it's the first occurrence
+
             if (mid == 0 || arr[mid - 1] != target)
             {
                 return mid;

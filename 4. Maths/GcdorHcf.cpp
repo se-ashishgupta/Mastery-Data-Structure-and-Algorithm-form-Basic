@@ -59,7 +59,9 @@ int gcdOptimal(int a, int b) // O(log(min(a,b)))
 
 int main()
 {
-    int a = 20, b = 15;
+    int a, b;
+    cin >> a >> b;
+
     cout << gcdOptimal(a, b);
     return 0;
 }

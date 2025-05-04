@@ -7,3 +7,9 @@ Recusrion -------------
 1. Tower of Hanoi.
 2. Josephus Poblem.
 3. Permutation
+
+
+Array ---------------
+1. Leetcode 1004
+2. Leetcode 121
+3. Leetcode 41. First Missing Positive
